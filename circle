@@ -1,0 +1,33 @@
+// Define the radius of the circle
+const radius = 5;
+
+// Calculate the area of the circle
+const area = Math.PI * radius ** 2;
+
+// Calculate the circumference of the circle
+const circumference = 2 * Math.PI * radius;
+
+// Log the results to the console
+console.log(`The area of the circle is: ${area}`);
+console.log(`The circumference of the circle is: ${circumference}`);
+
+
+This code uses the built-in Math object in JavaScript to calculate the area and circumference of a circle. The Math.PI property gives us the value of pi, and the ** operator is used to raise the radius to the power of 2. The console.log statements at the end print out the results of the calculations.
+
+You could also encapsulate this functionality in a function, like so:
+
+
+function calculateCircle(radius) {
+  const area = Math.PI * radius ** 2;
+  const circumference = 2 * Math.PI * radius;
+  return { area, circumference };
+}
+
+const radius = 5;
+const { area, circumference } = calculateCircle(radius);
+
+console.log(`The area of the circle is: ${area}`);
+console.log(`The circumference of the circle is: ${circumference}`);
+
+
+In this version, the calculateCircle function takes a radius parameter and returns an object with the area and circumference properties. The function can then be called with a specific radius value, and the returned object can be destructured to get the area and circumference values, which are then logged to the console.
